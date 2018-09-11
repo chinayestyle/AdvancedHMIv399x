@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Gen2Training.Displays;
 
 namespace Gen2Training
 {
@@ -14,9 +15,11 @@ namespace Gen2Training
         [STAThread]
         static void Main()
         {
+            SplashForm.ShowSplashScreen();
+            frmMdiParent frmMdiParent = new frmMdiParent();
+            SplashForm.CloseForm();
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMdiParent());
+            Application.Run(frmMdiParent);
         }
     }
 }

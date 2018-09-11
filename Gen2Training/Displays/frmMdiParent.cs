@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MfgControl.AdvancedHMI;
 using MfgControl.AdvancedHMI.Drivers;
+using Gen2Training.Displays;
 
 namespace Gen2Training
 {
@@ -40,16 +41,7 @@ namespace Gen2Training
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string filename = null;
-            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                filename = openFileDialog1.FileName;
-            }
-            if (filename != null)
-            {
-                string text = File.ReadAllText(filename);
-                MessageBox.Show(text);
-            }
+          
         }
 
         private void manualsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -101,9 +93,20 @@ namespace Gen2Training
             button1.Visible = true;
         }
 
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            ToolsControls controltools = new ToolsControls();
+            controltools.Show();
+            controltools.BringToFront();
+            controltools.Focus();
+        }
+
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-
+            ToolsVFD vfdtools = new ToolsVFD();
+            vfdtools.Show();
+            vfdtools.BringToFront();
+            vfdtools.Focus();
         }
         
 
@@ -136,16 +139,6 @@ namespace Gen2Training
                 this.Refresh();
             }
 
-            else if (activeform.GetType() == typeof(C_MotorNameplateData))
-            {
-                D_InitialTorqueSetpoint frminitialtorquesetpoint = new D_InitialTorqueSetpoint();
-                frminitialtorquesetpoint.MdiParent = this;
-                frminitialtorquesetpoint.Dock = DockStyle.Fill;
-                frminitialtorquesetpoint.Show();
-                this.Refresh();
-            }
-
-
             else if (activeform.GetType() == typeof(D_InitialTorqueSetpoint))
             {
                 E_InitialSpeed_Scaling_Factor frminitialscalingfactor = new E_InitialSpeed_Scaling_Factor();
@@ -153,6 +146,12 @@ namespace Gen2Training
                 frminitialscalingfactor.Dock = DockStyle.Fill;
                 frminitialscalingfactor.Show();
                 this.Refresh();
+            }
+
+
+            else if (activeform.GetType() == typeof(D_InitialTorqueSetpoint))
+            {
+               
             }
 
             else
@@ -168,8 +167,19 @@ namespace Gen2Training
             }
 
         }
+
+
         #endregion
 
-    
+        private void sensorCloudWindowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SensorCloud sensorCloud = new SensorCloud();
+            sensorCloud.Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

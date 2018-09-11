@@ -1,6 +1,6 @@
-﻿namespace Gen2Training
+﻿namespace Gen2Training.Displays
 {
-    partial class E_InitialSpeed_Scaling_Factor
+    partial class SplashForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // SplashForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "E_InitialSpeed_Scaling_Factor";
+            this.ClientSize = new System.Drawing.Size(1093, 518);
+            this.Name = "SplashForm";
+            this.Text = "Splash";
+            this.Load += new System.EventHandler(this.Load_Splashform);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

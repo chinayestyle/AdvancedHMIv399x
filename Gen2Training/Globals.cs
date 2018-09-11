@@ -8,7 +8,7 @@ namespace Gen2Training
 {
     public partial class Globals
     {
-
+       public string plcipaddressglobal { get; set; }
        public class MotorParameters
         {
             public string ParameterNumber { get; set; }

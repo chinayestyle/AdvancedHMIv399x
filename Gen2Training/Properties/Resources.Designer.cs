@@ -63,9 +63,39 @@ namespace Gen2Training.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap interfaceloadcell {
+            get {
+                object obj = ResourceManager.GetObject("interfaceloadcell", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Intralox_brochurecvr {
+            get {
+                object obj = ResourceManager.GetObject("Intralox_brochurecvr", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap overview {
             get {
                 object obj = ResourceManager.GetObject("overview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tuspeedscalingfactor {
+            get {
+                object obj = ResourceManager.GetObject("tuspeedscalingfactor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

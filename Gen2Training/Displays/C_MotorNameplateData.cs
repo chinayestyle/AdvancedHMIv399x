@@ -26,6 +26,8 @@ namespace Gen2Training
         private void C_Load(object sender, System.EventArgs e)
         {
             Globals globals = new Globals();
+            globals.plcipaddressglobal = "172.16.30.55";
+            ethernetIPforCLXCom1.IPAddress = globals.plcipaddressglobal;
             Dictionary<int, Globals.MotorParameters> nameplatedict = globals.ParamDict();
             int paramcount = 7;
             BasicLabel[] labels = new BasicLabel[paramcount];

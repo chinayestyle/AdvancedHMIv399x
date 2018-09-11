@@ -7,17 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MfgControl.AdvancedHMI.Controls;
 
-namespace Gen2Training
+namespace Gen2Training.Displays
 {
-    public partial class Gen2TrainingSession : Form
+    public partial class ToolsControls : ToolsForm
     {
-        public Gen2TrainingSession()
+        public ToolsControls()
         {
             InitializeComponent();
         }
 
-    
+        public void Load_toolscontrols(object sender, System.EventArgs e)
+        {
+            ethernetIPforCLXCom1.IPAddress = "172.16.30.55";
+        }
     }
 }
