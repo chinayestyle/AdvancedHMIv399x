@@ -39,6 +39,7 @@ namespace Gen2Training
             foreach (KeyValuePair<int, Globals.MotorParameters> entry in nameplatedict )
             {
                 labels[entry.Key] = new BasicLabel();
+                labels[entry.Key].ComComponent = ethernetIPforCLXCom1;
                 labels[entry.Key].Text = entry.Value.ParameterName;
                 labels[entry.Key].PLCAddressValue = entry.Value.plcaddress;
                 labels[entry.Key].PLCAddressKeypad = entry.Value.plcaddress;
@@ -50,6 +51,7 @@ namespace Gen2Training
                 
                 LabelLocation.Y += 70;
                 textBoxes[entry.Key] = new Label();
+
                 textBoxes[entry.Key].Text = entry.Value.ParameterName;
                 textBoxes[entry.Key].Font = new Font("Arial", this.richTextBox1.Font.Size); 
 

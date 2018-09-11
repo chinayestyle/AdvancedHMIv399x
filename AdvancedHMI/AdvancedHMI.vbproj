@@ -196,7 +196,9 @@
     <None Include="Resources\AdvancedHMILogoBR.png" />
     <Content Include="UsageAndLicense.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Displays\" />
+  </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>

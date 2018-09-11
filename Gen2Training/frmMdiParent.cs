@@ -31,12 +31,66 @@ namespace Gen2Training
                 button1.Visible = false;
             }
         }
+        # region "Menu and Tool STrips"
 
         private void newToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
         }
 
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string filename = null;
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                filename = openFileDialog1.FileName;
+            }
+            if (filename != null)
+            {
+                string text = File.ReadAllText(filename);
+                MessageBox.Show(text);
+            }
+        }
+
+        private void manualsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Title = "Open Schematics";
+            openFileDialog1.InitialDirectory = "\\prod\\root\\V_Drive\\team\\Intralox Spiral Team Videos and Large Files\\CONTROLS\\2 - Gen II Controls\\1- Documentation\\pdf";
+            openFileDialog1.Filter = "PDF Files|*.pdf";
+
+            string filename = null;
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                filename = openFileDialog1.FileName;
+            }
+            if (filename != null)
+            {
+                OpenWindow openWindow = new OpenWindow();
+                openWindow.filename = filename;
+                openWindow.Show();
+
+            }
+        }
+
+        private void schematicsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Title = "Open Schematics";
+            openFileDialog1.Filter = "PDF Files|*.pdf";
+            openFileDialog1.InitialDirectory = "C:\\Users\\erick\\OneDrive\\Documents\\Spiral-Surface";
+            string filename = null;
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                filename = openFileDialog1.FileName;
+            }
+            if (filename != null)
+            {
+                OpenWindow openWindow = new OpenWindow();
+                openWindow.filename = filename;
+                openWindow.Show();
+
+            }
+
+        }
         private void trainingToolStripMenuItem_Click(object sender, EventArgs e)
         {
             A_Overview newMDIChild = new A_Overview();
@@ -47,10 +101,25 @@ namespace Gen2Training
             button1.Visible = true;
         }
 
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+        
+
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("calc");
+        }
+
+        #endregion
+
+        #region "Next Button"
+
         private void button1_Click(object sender, EventArgs e)
         {
             Form activeform = ActiveMdiChild;
-            if (activeform.GetType() == typeof(Gen2TrainingSession))
+            if (activeform.GetType() == typeof(A_Overview))
             {
                 C_MotorNameplateData frmoverview = new C_MotorNameplateData();
                 frmoverview.MdiParent = this;
@@ -58,9 +127,9 @@ namespace Gen2Training
                 frmoverview.Show();
                 this.Refresh();
             }
-            else if (activeform.GetType() == typeof(A_Overview))
+            else if (activeform.GetType() == typeof(C_MotorNameplateData))
             {
-                C_MotorNameplateData frmnameplate = new C_MotorNameplateData();
+                D_InitialTorqueSetpoint frmnameplate = new D_InitialTorqueSetpoint();
                 frmnameplate.MdiParent = this;
                 frmnameplate.Dock = DockStyle.Fill;
                 frmnameplate.Show();
@@ -99,59 +168,8 @@ namespace Gen2Training
             }
 
         }
+        #endregion
 
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            string filename = null;
-            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                filename = openFileDialog1.FileName;
-            }
-            if (filename != null)
-            {
-                string text = File.ReadAllText(filename);
-                MessageBox.Show(text);
-            }
-        }
-
-        private void manualsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.Title = "Open Schematics";
-            openFileDialog1.InitialDirectory = "C:\\Users\\erick\\OneDrive\\Documents\\Spiral-Surface";
-            openFileDialog1.Filter = "PDF Files|*.pdf";
-
-            string filename = null;
-            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                filename = openFileDialog1.FileName;
-            }
-            if (filename != null)
-            {
-                OpenWindow openWindow = new OpenWindow();
-                openWindow.filename = filename;
-                openWindow.Show();
-
-            }
-        }
-
-        private void schematicsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.Title = "Open Schematics";
-            openFileDialog1.Filter = "PDF Files|*.pdf";
-            openFileDialog1.InitialDirectory = "C:\\Users\\erick\\OneDrive\\Documents\\Spiral-Surface"; 
-            string filename = null;
-            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                filename = openFileDialog1.FileName;
-            }
-            if (filename != null)
-            {
-                OpenWindow openWindow = new OpenWindow();
-                openWindow.filename = filename;
-                openWindow.Show();
-
-            }
-
-        }
+    
     }
 }
