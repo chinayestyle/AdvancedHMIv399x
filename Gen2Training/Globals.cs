@@ -14,6 +14,7 @@ namespace Gen2Training
             public string ParameterNumber { get; set; }
             public string ParameterName { get; set; }
             public string Unit { get; set; }
+            public string plcaddress { get; set; }
         }
 
 
@@ -21,12 +22,12 @@ namespace Gen2Training
         {
             Dictionary<int, MotorParameters> nameplate = new Dictionary<int, MotorParameters>()
             {
-                {1, new MotorParameters{ParameterNumber="99.06", ParameterName="Motor Nominal Current", Unit="Amps"} },
-                {2, new MotorParameters{ParameterNumber="99.07", ParameterName="Motor Nominal Voltage", Unit="Volts"} },
-                {3, new MotorParameters{ParameterNumber="99.08", ParameterName="Motor Nominal Frequency", Unit="Hz"} },
-                {4, new MotorParameters{ParameterNumber="99.09", ParameterName="Motor Nominal Speed", Unit="RPM"} },
-                {5, new MotorParameters{ParameterNumber="99.10", ParameterName="Motor Nominal Power", Unit="kW" } },
-                {6, new MotorParameters{ParameterNumber="99.11", ParameterName="Motor Nominal Power Factor", Unit="" } }
+                {1, new MotorParameters{ParameterNumber="99.06", ParameterName="Motor Nominal Current", Unit="Amps", plcaddress="np_nomcurrent"} },
+                {2, new MotorParameters{ParameterNumber="99.07", ParameterName="Motor Nominal Voltage", Unit="Volts", plcaddress="np_nomvolt"} },
+                {3, new MotorParameters{ParameterNumber="99.08", ParameterName="Motor Nominal Frequency", Unit="Hz", plcaddress="np_freq"} },
+                {4, new MotorParameters{ParameterNumber="99.09", ParameterName="Motor Nominal Speed", Unit="RPM", plcaddress="np_rpm" } },
+                {5, new MotorParameters{ParameterNumber="99.10", ParameterName="Motor Nominal Power", Unit="kW", plcaddress="np_kw" } },
+                {6, new MotorParameters{ParameterNumber="99.11", ParameterName="Motor Nominal Power Factor", Unit="", plcaddress="np_cos" } }
             };
 
             return nameplate;

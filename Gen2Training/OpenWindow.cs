@@ -10,16 +10,17 @@ using System.Windows.Forms;
 
 namespace Gen2Training
 {
-    public partial class D_InitialTorqueSetpoint : Gen2TrainingSession
+    public partial class OpenWindow : Form
     {
-        public D_InitialTorqueSetpoint()
+        public string filename { get; set; }
+
+        public OpenWindow()
         {
             InitializeComponent();
         }
-
-        private void D_InitialTorqueSetpoint_Load(object sender, EventArgs e)
+        public void LoadOpenWindow(object sender, System.EventArgs e)
         {
-
+            axAcroPDF1.src = filename;
         }
     }
 }

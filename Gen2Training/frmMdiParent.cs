@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,7 +39,7 @@ namespace Gen2Training
 
         private void trainingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Gen2TrainingSession newMDIChild = new Gen2TrainingSession();
+            A_Overview newMDIChild = new A_Overview();
             //set the parent form of the child window.
             newMDIChild.MdiParent = this;
             newMDIChild.Dock = DockStyle.Fill;
@@ -94,6 +95,60 @@ namespace Gen2Training
                 var result = MessageBox.Show(message, caption,
                                             MessageBoxButtons.YesNoCancel,
                                             MessageBoxIcon.Information);
+
+            }
+
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string filename = null;
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                filename = openFileDialog1.FileName;
+            }
+            if (filename != null)
+            {
+                string text = File.ReadAllText(filename);
+                MessageBox.Show(text);
+            }
+        }
+
+        private void manualsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Title = "Open Schematics";
+            openFileDialog1.InitialDirectory = "C:\\Users\\erick\\OneDrive\\Documents\\Spiral-Surface";
+            openFileDialog1.Filter = "PDF Files|*.pdf";
+
+            string filename = null;
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                filename = openFileDialog1.FileName;
+            }
+            if (filename != null)
+            {
+                OpenWindow openWindow = new OpenWindow();
+                openWindow.filename = filename;
+                openWindow.Show();
+
+            }
+        }
+
+        private void schematicsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Title = "Open Schematics";
+            openFileDialog1.Filter = "PDF Files|*.pdf";
+            openFileDialog1.InitialDirectory = "C:\\Users\\erick\\OneDrive\\Documents\\Spiral-Surface"; 
+            string filename = null;
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                filename = openFileDialog1.FileName;
+            }
+            if (filename != null)
+            {
+                OpenWindow openWindow = new OpenWindow();
+                openWindow.filename = filename;
+                openWindow.Show();
 
             }
 
