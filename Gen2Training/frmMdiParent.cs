@@ -17,10 +17,86 @@ namespace Gen2Training
         public frmMdiParent()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
             this.BackColor = Color.FromArgb(23, 32, 43);
             ethernetIPforCLXCom1.IPAddress = "172.16.30.55";
-            menuStrip1.MdiWindowListItem = menuStrip1.
-            
+            Form activechild = this.ActiveMdiChild;
+            if (activechild != null)
+            {
+                button1.Visible = true;
+            }
+            else
+            {
+                button1.Visible = false;
+            }
+        }
+
+        private void newToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void trainingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Gen2TrainingSession newMDIChild = new Gen2TrainingSession();
+            //set the parent form of the child window.
+            newMDIChild.MdiParent = this;
+            newMDIChild.Dock = DockStyle.Fill;
+            newMDIChild.Show();
+            button1.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form activeform = ActiveMdiChild;
+            if (activeform.GetType() == typeof(Gen2TrainingSession))
+            {
+                C_MotorNameplateData frmoverview = new C_MotorNameplateData();
+                frmoverview.MdiParent = this;
+                frmoverview.Dock = DockStyle.Fill;
+                frmoverview.Show();
+                this.Refresh();
+            }
+            else if (activeform.GetType() == typeof(A_Overview))
+            {
+                C_MotorNameplateData frmnameplate = new C_MotorNameplateData();
+                frmnameplate.MdiParent = this;
+                frmnameplate.Dock = DockStyle.Fill;
+                frmnameplate.Show();
+                this.Refresh();
+            }
+
+            else if (activeform.GetType() == typeof(C_MotorNameplateData))
+            {
+                D_InitialTorqueSetpoint frminitialtorquesetpoint = new D_InitialTorqueSetpoint();
+                frminitialtorquesetpoint.MdiParent = this;
+                frminitialtorquesetpoint.Dock = DockStyle.Fill;
+                frminitialtorquesetpoint.Show();
+                this.Refresh();
+            }
+
+
+            else if (activeform.GetType() == typeof(D_InitialTorqueSetpoint))
+            {
+                E_InitialSpeed_Scaling_Factor frminitialscalingfactor = new E_InitialSpeed_Scaling_Factor();
+                frminitialscalingfactor.MdiParent = this;
+                frminitialscalingfactor.Dock = DockStyle.Fill;
+                frminitialscalingfactor.Show();
+                this.Refresh();
+            }
+
+            else
+            {
+                const string message = "Thank you for completing the Training Session. Click Ok to exit./n Would you like to e-mail yourself a recording of this session?";
+
+                const string caption = "Session Completed";
+
+                var result = MessageBox.Show(message, caption,
+                                            MessageBoxButtons.YesNoCancel,
+                                            MessageBoxIcon.Information);
+
+            }
+
         }
     }
 }

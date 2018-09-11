@@ -7,17 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MfgControl.AdvancedHMI.Controls;
 
 namespace Gen2Training
 {
-    public partial class Gen2TrainingSession : Form
+    public partial class A_Overview : Gen2TrainingSession
     {
-        public Gen2TrainingSession()
+        public A_Overview()
         {
-            InitializeComponent();
+           InitializeComponent();
         }
-
-    
     }
 }

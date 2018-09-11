@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MfgControl.AdvancedHMI.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AdvancedHMIControls\bin\Debug\MfgControl.AdvancedHMI.Controls.dll</HintPath>
+    </Reference>
     <Reference Include="MfgControl.AdvancedHMI.Drivers">
       <HintPath>..\AdvancedHMIDrivers\bin\Debug\MfgControl.AdvancedHMI.Drivers.dll</HintPath>
     </Reference>
@@ -49,6 +53,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="A_Overview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Overview.Designer.cs">
+      <DependentUpon>A_Overview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_MotorNameplateData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_MotorNameplateData.Designer.cs">
+      <DependentUpon>C_MotorNameplateData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="D_InitialTorqueSetpoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="D_InitialTorqueSetpoint.Designer.cs">
+      <DependentUpon>D_InitialTorqueSetpoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E_InitialSpeed_Scaling_Factor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E_InitialSpeed_Scaling_Factor.Designer.cs">
+      <DependentUpon>E_InitialSpeed_Scaling_Factor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,8 +95,12 @@
     <Compile Include="Gen2TrainingSession.Designer.cs">
       <DependentUpon>Gen2TrainingSession.cs</DependentUpon>
     </Compile>
+    <Compile Include="Globals.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="C_MotorNameplateData.resx">
+      <DependentUpon>C_MotorNameplateData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

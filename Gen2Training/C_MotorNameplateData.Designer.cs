@@ -1,6 +1,6 @@
 ﻿namespace Gen2Training
 {
-    partial class Gen2TrainingSession
+    partial class C_MotorNameplateData
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gen2TrainingSession));
             this.ethernetIPforCLXCom1 = new AdvancedHMIDrivers.EthernetIPforCLXCom(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ethernetIPforCLXCom1)).BeginInit();
             this.SuspendLayout();
@@ -48,16 +47,14 @@
             this.ethernetIPforCLXCom1.RoutePath = null;
             this.ethernetIPforCLXCom1.Timeout = 4000;
             // 
-            // Gen2TrainingSession
+            // C_MotorNameplateData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1089, 583);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Gen2TrainingSession";
-            this.Text = "Gen2TrainingSession";
+            this.ClientSize = new System.Drawing.Size(1087, 820);
+            this.Name = "C_MotorNameplateData";
+            this.Text = "C_MotorNameplateData";
+            this.Load += new System.EventHandler(this.C_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ethernetIPforCLXCom1)).EndInit();
             this.ResumeLayout(false);
 
