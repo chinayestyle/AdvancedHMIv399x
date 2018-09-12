@@ -40,6 +40,7 @@
             this.trainingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.experimentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sensorCloudWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -48,7 +49,6 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.ethernetIPforCLXCom1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -106,14 +106,14 @@
             // manualsToolStripMenuItem
             // 
             this.manualsToolStripMenuItem.Name = "manualsToolStripMenuItem";
-            this.manualsToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.manualsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.manualsToolStripMenuItem.Text = "Manuals";
             this.manualsToolStripMenuItem.Click += new System.EventHandler(this.manualsToolStripMenuItem_Click);
             // 
             // schematicsToolStripMenuItem
             // 
             this.schematicsToolStripMenuItem.Name = "schematicsToolStripMenuItem";
-            this.schematicsToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.schematicsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.schematicsToolStripMenuItem.Text = "Schematics";
             this.schematicsToolStripMenuItem.Click += new System.EventHandler(this.schematicsToolStripMenuItem_Click);
             // 
@@ -147,6 +147,13 @@
             this.sensorCloudWindowToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.sensorCloudWindowToolStripMenuItem.Text = "SensorCloud Window";
             this.sensorCloudWindowToolStripMenuItem.Click += new System.EventHandler(this.sensorCloudWindowToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // windowToolStripMenuItem
             // 
@@ -224,13 +231,6 @@
             // 
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // frmMdiParent
             // 
