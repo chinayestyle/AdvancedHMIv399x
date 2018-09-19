@@ -16,6 +16,7 @@ namespace Gen2Training
 {
     public partial class frmMdiParent : Form
     {
+        static EthernetIPforCLX ethernet1 = new EthernetIPforCLX();
         public frmMdiParent()
         {
             InitializeComponent();
@@ -67,6 +68,7 @@ namespace Gen2Training
         private void schematicsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openFileDialog1.Title = "Open Schematics";
+            openFileDialog1.InitialDirectory = "C:\\Users\\ealvaren\\Documents\\1-Projects\\2 - Local\\0 - Tension Control System V2.0A\\0 - FINAL DOCUMENTS Released on 03202017";
             openFileDialog1.Filter = "PDF Files|*.pdf";
             openFileDialog1.InitialDirectory = "C:\\Users\\erick\\OneDrive\\Documents\\Spiral-Surface";
             string filename = null;
@@ -85,7 +87,7 @@ namespace Gen2Training
         }
         private void trainingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            A_Overview newMDIChild = new A_Overview();
+            Instructions newMDIChild = new Instructions();
             //set the parent form of the child window.
             newMDIChild.MdiParent = this;
             newMDIChild.Dock = DockStyle.Fill;
@@ -122,7 +124,15 @@ namespace Gen2Training
         private void button1_Click(object sender, EventArgs e)
         {
             Form activeform = ActiveMdiChild;
-            if (activeform.GetType() == typeof(A_Overview))
+            if (activeform.GetType() == typeof(Instructions))
+            {
+                A_Overview frmoverview = new A_Overview();
+                frmoverview.MdiParent = this;
+                frmoverview.Dock = DockStyle.Fill;
+                frmoverview.Show();
+                this.Refresh();
+            }
+            else if (activeform.GetType() == typeof(A_Overview))
             {
                 C_MotorNameplateData frmoverview = new C_MotorNameplateData();
                 frmoverview.MdiParent = this;

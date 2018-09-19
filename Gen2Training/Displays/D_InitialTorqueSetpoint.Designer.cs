@@ -34,8 +34,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.BasicLabel3 = new AdvancedHMIControls.BasicLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ethernetIPforCLXCom1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -49,7 +49,7 @@
             this.ethernetIPforCLXCom1.DisableSubscriptions = false;
             this.ethernetIPforCLXCom1.IniFileName = "";
             this.ethernetIPforCLXCom1.IniFileSection = null;
-            this.ethernetIPforCLXCom1.IPAddress = "192.168.0.10";
+            this.ethernetIPforCLXCom1.IPAddress = "172.16.30.55";
             this.ethernetIPforCLXCom1.PollRateOverride = 500;
             this.ethernetIPforCLXCom1.Port = 44818;
             this.ethernetIPforCLXCom1.ProcessorSlot = 0;
@@ -119,6 +119,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Commissioning Instructions";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 84);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(928, 124);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // richTextBox1
             // 
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -131,23 +140,14 @@
     "ial torque setpoint. Enter the value in the Box labeled \"Torque Setpoint\" on the" +
     " left, and open the VFD tools above.";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 84);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(928, 124);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
             // D_InitialTorqueSetpoint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1208, 376);
+            this.ClientSize = new System.Drawing.Size(1208, 633);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "D_InitialTorqueSetpoint";
             this.Text = "D_InitialTorqueSetpoint";
             this.Load += new System.EventHandler(this.D_InitialTorqueSetpoint_Load);

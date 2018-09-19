@@ -54,6 +54,15 @@
     <StartupObject>Gen2Training.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="MfgControl.AdvancedHMI.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\AdvancedHMIControls\bin\Debug\MfgControl.AdvancedHMI.Controls.dll</HintPath>
@@ -61,22 +70,42 @@
     <Reference Include="MfgControl.AdvancedHMI.Drivers">
       <HintPath>..\AdvancedHMIDrivers\bin\Debug\MfgControl.AdvancedHMI.Drivers.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.OData.Client, Version=7.5.0.20627, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.OData.Client.7.5.0\lib\net45\Microsoft.OData.Client.dll</HintPath>
+    <Reference Include="Microsoft.OData.Client, Version=7.5.1.20914, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OData.Client.7.5.1\lib\net45\Microsoft.OData.Client.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.OData.Core, Version=7.5.0.20627, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.OData.Core.7.5.0\lib\portable-net45+win8+wpa81\Microsoft.OData.Core.dll</HintPath>
+    <Reference Include="Microsoft.OData.Core, Version=7.5.1.20914, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OData.Core.7.5.1\lib\portable-net45+win8+wpa81\Microsoft.OData.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.OData.Edm, Version=7.5.0.20627, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.OData.Edm.7.5.0\lib\portable-net45+win8+wpa81\Microsoft.OData.Edm.dll</HintPath>
+    <Reference Include="Microsoft.OData.Edm, Version=7.5.1.20914, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OData.Edm.7.5.1\lib\portable-net45+win8+wpa81\Microsoft.OData.Edm.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Spatial, Version=7.5.0.20627, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Spatial.7.5.0\lib\portable-net45+win8+wpa81\Microsoft.Spatial.dll</HintPath>
+    <Reference Include="Microsoft.Spatial, Version=7.5.1.20914, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Spatial.7.5.1\lib\portable-net45+win8+wpa81\Microsoft.Spatial.dll</HintPath>
     </Reference>
+    <Reference Include="OpcLabs.BaseLib, Version=5.53.315.1, Culture=neutral, PublicKeyToken=6faddca41dacb409, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpcLabs.QuickOpc.5.53.315\lib\net452\OpcLabs.BaseLib.dll</HintPath>
+    </Reference>
+    <Reference Include="OpcLabs.BaseLibForms, Version=5.53.315.1, Culture=neutral, PublicKeyToken=6faddca41dacb409, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpcLabs.QuickOpc.5.53.315\lib\net452\OpcLabs.BaseLibForms.dll</HintPath>
+    </Reference>
+    <Reference Include="OpcLabs.EasyOpcClassic, Version=5.53.315.1, Culture=neutral, PublicKeyToken=6faddca41dacb409, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpcLabs.QuickOpc.5.53.315\lib\net452\OpcLabs.EasyOpcClassic.dll</HintPath>
+    </Reference>
+    <Reference Include="OpcLabs.EasyOpcForms, Version=5.53.315.1, Culture=neutral, PublicKeyToken=6faddca41dacb409, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpcLabs.QuickOpc.Forms.5.53.315\lib\net452\OpcLabs.EasyOpcForms.dll</HintPath>
+    </Reference>
+    <Reference Include="OpcLabs.EasyOpcUA, Version=5.53.315.1, Culture=neutral, PublicKeyToken=6faddca41dacb409, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpcLabs.QuickOpc.5.53.315\lib\net452\OpcLabs.EasyOpcUA.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -86,6 +115,8 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Displays\A_Overview.cs">
@@ -99,6 +130,12 @@
     </Compile>
     <Compile Include="Displays\B_GenInstructions.Designer.cs">
       <DependentUpon>B_GenInstructions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Displays\Chart1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Displays\Chart1.Designer.cs">
+      <DependentUpon>Chart1.cs</DependentUpon>
     </Compile>
     <Compile Include="Displays\C_MotorNameplateData.cs">
       <SubType>Form</SubType>
@@ -186,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Displays\B_GenInstructions.resx">
       <DependentUpon>B_GenInstructions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Displays\Chart1.resx">
+      <DependentUpon>Chart1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Displays\C_MotorNameplateData.resx">
       <DependentUpon>C_MotorNameplateData.cs</DependentUpon>
@@ -304,51 +344,6 @@
       <WrapperTool>aximp</WrapperTool>
       <Isolated>False</Isolated>
     </COMReference>
-    <COMReference Include="FTAE_AlarmHistorianLib">
-      <Guid>{275E3805-FDA9-4812-AFC5-00D2E2D4D67A}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="METrend">
-      <Guid>{EC66E430-280E-11D4-AB9C-00C04F9915E3}</Guid>
-      <VersionMajor>4</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="OPCDRIVERLib">
-      <Guid>{7DC725FA-6216-4567-90E4-B7FA1D58DD57}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="RNACLIENTCORELib">
-      <Guid>{452B5AA1-6BB1-11D3-89C5-0010A4EF348F}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="RNASECURITYINTERFACESLib">
-      <Guid>{0B97CB59-EA22-4023-B06B-8C4F44FA81C6}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
     <COMReference Include="stdole">
       <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
       <VersionMajor>2</VersionMajor>
@@ -380,6 +375,8 @@
     <None Include="Resources\splashpicture.bmp" />
     <None Include="Resources\tuspeedscalingfactor.png" />
     <None Include="Resources\interfaceloadcell.png" />
+    <Content Include="Resources\spiralintro.png" />
+    <None Include="Resources\spiralintro1.png" />
     <Content Include="Resources\wrench-flat.png" />
   </ItemGroup>
   <ItemGroup>

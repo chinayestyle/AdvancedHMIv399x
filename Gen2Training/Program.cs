@@ -4,6 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Gen2Training.Displays;
+using LiveCharts;
+using LiveCharts.WinForms;
+using LiveCharts.Wpf;
 
 namespace Gen2Training
 {

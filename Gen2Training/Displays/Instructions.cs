@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Gen2Training.Displays
 {
-    public partial class Instructions : Form
+    public partial class Instructions : Gen2TrainingSession
     {
         public Instructions()
         {

@@ -84,7 +84,7 @@
             this.ethernetIPforCLXCom1.DisableSubscriptions = false;
             this.ethernetIPforCLXCom1.IniFileName = "";
             this.ethernetIPforCLXCom1.IniFileSection = null;
-            this.ethernetIPforCLXCom1.IPAddress = "192.168.0.10";
+            this.ethernetIPforCLXCom1.IPAddress = "172.16.30.55";
             this.ethernetIPforCLXCom1.PollRateOverride = 500;
             this.ethernetIPforCLXCom1.Port = 44818;
             this.ethernetIPforCLXCom1.ProcessorSlot = 0;
